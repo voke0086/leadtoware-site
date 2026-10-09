@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Image hotlinking is not permitted">
+  <rect width="800" height="800" fill="#f4f5f7"/>
+  <rect x="40" y="40" width="720" height="720" fill="none" stroke="#d8dade" stroke-width="2"/>
+  <g font-family="Helvetica,Arial,sans-serif" text-anchor="middle">
+    <text x="400" y="360" font-size="86" font-weight="bold" fill="#1c1f24" letter-spacing="6">LEADTO</text>
+    <text x="400" y="404" font-size="26" fill="#6b7280" letter-spacing="2">BATHROOM &amp; KITCHEN</text>
+    <line x1="300" y1="450" x2="500" y2="450" stroke="#c6c9ce" stroke-width="2"/>
+    <text x="400" y="500" font-size="24" fill="#4b5563">This image is served by leadtoware.com</text>
+    <text x="400" y="536" font-size="24" fill="#4b5563">Hotlinking is not permitted.</text>
+    <text x="400" y="592" font-size="22" fill="#9aa1ab">Visit www.leadtoware.com for the original</text>
+  </g>
+</svg>
