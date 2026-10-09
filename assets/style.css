@@ -265,3 +265,6 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
 .pager a.pg:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-l)}
 .pager .pg.on{background:var(--acc);border-color:var(--acc);color:#fff}
 .pager .pg-info{font:500 13.5px/1 var(--sans);color:var(--ink-3);margin-left:6px}
+
+/* lang flags (v2) */
+.ls-menu .flag{width:14px;height:10px;border-radius:2px;margin-right:7px;vertical-align:-1px;display:inline-block;box-shadow:0 0 0 .5px rgba(0,0,0,.15)}
