@@ -5,3 +5,6 @@ _zh_cache.json
 _zh_segs_all.txt
 _audit_report.json
 *.bak_oldrefs
+
+# 图片只走 CDN（img.leadtoware.com / img2.leadtoware.com），不进 Git 仓库
+media/
