@@ -275,3 +275,11 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
 @media (min-width:981px){.ft-in{grid-template-columns:1.25fr 1.75fr .85fr 1.15fr}}
 /* back to a single column on phones */
 @media (max-width:560px){.ft-cats.cols{grid-template-columns:1fr}}
+
+/* ---------- GEO 自包含问答块（2026-10-13）----------
+   每详情页 130–170 词的买家问答，供 AI 引擎直接摘取；由真实字段驱动，页页不同。 */
+.qa{margin:32px 0 34px;max-width:74ch}
+.qa h2{margin:0 0 18px}
+.qa h3{font-size:16.5px;line-height:1.5;font-weight:600;color:var(--ink);margin:0 0 7px}
+.qa p{font-size:16px;line-height:1.78;color:#2b3b4a;margin:0 0 20px}
+.qa p:last-child{margin-bottom:0}
