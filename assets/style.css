@@ -255,7 +255,8 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
   /* 语言菜单（手机版 2026-10-14）：右侧锚定 + 限宽不出屏，修「偏进左屏外点不到」 */
   .langsel{position:relative}
   .ls-menu{right:0;left:auto;min-width:186px;max-width:calc(100vw - 40px);z-index:80}
-  [dir="rtl"] .ls-menu{right:0;left:auto;max-width:calc(100vw - 40px)}
+  /* RTL 必须左锚定：右锚定会让菜单向左伸出，触发 RTL 文档的横向溢出（实测把视口撑到 480px） */
+  [dir="rtl"] .ls-menu{left:0;right:auto;max-width:calc(100vw - 40px)}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
