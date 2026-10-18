@@ -291,3 +291,27 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
 .qa h3{font-size:16.5px;line-height:1.5;font-weight:600;color:var(--ink);margin:0 0 7px}
 .qa p{font-size:16px;line-height:1.78;color:#2b3b4a;margin:0 0 20px}
 .qa p:last-child{margin-bottom:0}
+
+/* ---------- 全球聊天入口 IM 矩阵（2026-10-17）----------
+   六语页脚统一区块 + 联系页大区块；卡片由 _site_im.py 渲染，
+   未开通渠道不产出节点（杜绝死链）。品牌色经行内 --c 传入。 */
+.imbox{padding:66px 0;border-top:1px solid var(--line)}
+.imbox-lg{background:var(--paper-2);border-radius:16px;padding:52px 34px;margin:44px 0 0;border-top:0}
+.imgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(176px,1fr));gap:14px;margin-top:28px}
+.im{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;
+  padding:22px 14px 20px;background:var(--paper);border:1px solid var(--line);
+  border-radius:14px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.im:hover,.im:focus-visible{border-color:var(--c);box-shadow:0 12px 28px rgba(18,38,54,.11);transform:translateY(-2px)}
+.im-ic{width:44px;height:44px;border-radius:13px;background:var(--c);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--disp);font-weight:700;font-size:19px;line-height:1}
+.im-n{font-family:var(--sans);font-weight:600;font-size:15.5px;color:var(--ink)}
+.im-r{font-size:12.5px;line-height:1.45;color:var(--ink-3)}
+.imnote{margin:22px 0 0;font-size:14.5px;color:var(--ink-2)}
+.imnote a{color:var(--acc);font-weight:600;border-bottom:1px solid var(--acc-l)}
+.imnote a:hover{border-bottom-color:var(--acc)}
+@media (max-width:560px){
+  .imbox{padding:48px 0}
+  .imbox-lg{padding:36px 20px;border-radius:12px}
+  .imgrid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+}
