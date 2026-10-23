@@ -226,8 +226,9 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
 /* ---------- 响应式 ---------- */
 /* 中等宽度桌面：再收一档保证一行排下（≤980 切 nav-mob） */
 @media (max-width:1160px) and (min-width:981px){
-  .hd-in{gap:12px}
-  .mi>a,.mi .mi-l{padding:9px 7px;font-size:13px}
+  .hd-in{gap:8px}
+  .mi>a,.mi .mi-l{padding:9px 3px;font-size:12px}
+  .hd-cta{padding:8px 10px;font-size:12px}
 }
 
 @media (max-width:980px){
