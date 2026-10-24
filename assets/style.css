@@ -230,7 +230,7 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
 @media (max-width:980px){
   .hd-in{height:auto;flex-wrap:wrap;gap:10px;padding:12px 0}
   .nav-desk{display:none}
-  .nav-mob{display:flex;order:3;width:100%;margin-left:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:2px}
+  .nav-mob{display:flex;order:3;width:100%;margin-left:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:2px;justify-content:flex-start}
   .nav-mob::-webkit-scrollbar{display:none}
   .nav-mob .mi>a{padding:8px 12px;font-size:14px}
   .nav-mob .mi ul{display:none!important}
@@ -263,6 +263,12 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
   .ls-menu{right:0;left:auto;min-width:186px;max-width:calc(100vw - 40px);z-index:80}
   /* RTL 必须左锚定：右锚定会让菜单向左伸出，触发 RTL 文档的横向溢出（实测把视口撑到 480px） */
   [dir="rtl"] .ls-menu{left:0;right:auto;max-width:calc(100vw - 40px)}
+  /* 语言按钮被挤出视口右缘（10-24 实测 divider 停在 x≈387、图标出屏）：手机档收窄 logo 与按钮，保证 brand+cta+langsel 一行放下 */
+  .brand svg{width:30px;height:30px}
+  .brand span{font-size:20px}
+  .brand em{font-size:10px;letter-spacing:2.5px}
+  .hd-cta{padding:8px 12px;font-size:12px}
+  .hd-in{gap:8px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
