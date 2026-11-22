@@ -236,7 +236,19 @@ h3{font-size:16px;line-height:1.45;font-weight:600}
   .nav-mob .mi ul{display:none!important}
   .mi ul{display:none!important}
   .hd-cta{order:2;margin-left:auto;padding:8px 13px;font-size:12.5px}
-  .langsel{order:2;margin-left:0}
+  /* langsel 必须贴住视口右缘（D1 修复 2026-10-29）：
+     俄语 CTA「Запросить цену」比英文长，980 档 flex-wrap 会把 langsel 挤到第二行左端，
+     而 .ls-menu 用 right:0 锚定 langsel 右缘 → 菜单 left 变成负数（实测 -88px），
+     整块菜单与国旗被裁出屏幕外（Russian 菜单被裁成「сский」，国旗全在屏外）。
+     做法：给 langsel 加 margin-left:auto —— auto 外边距只作用于它所在的那一行 flex，
+     所以「同排时」不改变 cta 的右对齐（free space 仍由 cta 的 auto 吸收），
+     「换行独占一行时」则把它推到行末右缘，right:0 锚点恒在屏内。
+     同时锁 ls-menu 的 left/auto，任何语种都不会溢出。 */
+  .langsel{order:2;margin-left:auto;margin-right:0}
+  .ls-menu{right:0;left:auto}
+  /* RTL 镜像：langsel 贴左缘、菜单左锚（阿语实测 menu left=18 正常，靠右会伸出屏幕） */
+  [dir="rtl"] .langsel{margin-left:0;margin-right:auto}
+  [dir="rtl"] .ls-menu{left:0;right:auto}
   .featgrid{grid-template-columns:1fr;gap:0}
   .fcat{border-top:1px solid var(--line);padding:26px 0}
   .featgrid .fcat:nth-child(1){border-top:0;padding-top:8px}
